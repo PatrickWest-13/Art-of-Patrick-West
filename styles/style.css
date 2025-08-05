@@ -1,0 +1,249 @@
+/* Structure */
+
+
+*{
+    box-sizing: border-box;
+}
+
+#banner { background-color: #333333; }
+#navigation { background-color: #333333; }
+#main-ideas { background-color: #333333;}
+#content { 
+    background-color: #333333; 
+    display: flex;
+    align-items: stretch;                      /* Makes all columns in a row the same height */
+    gap: 20px;                                 /* Optional: Adds spacing between the columns */
+    padding: 20px;                             /* Optional: For visual spacing */
+}
+#footer { background-color: #333333; }
+
+
+.custom-row {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 20px auto;
+}
+/*
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+*/
+
+
+
+
+
+
+/* Responsive Grid Colums */
+
+
+[class*='col-'] {
+  flex: 0 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 5px solid #7BCC00;
+}
+
+/*
+.custom-col-1 {flex: 0 0 8.33%; max-width: 8.33%;}
+.custom-col-2 {flex: 0 0 16.66%; max-width: 16.66%;}
+.custom-col-3 {flex: 0 0 25%; max-width: 25%;}
+.custom-col-4 {flex: 0 0 33.333%; max-width: 33.333%;}
+.custom-col-5 {flex: 0 0 41.66%; max-width: 41.66%;}
+.custom-col-6 {flex: 0 0 50%; max-width: 50%;}
+.custom-col-7 {flex: 0 0 58.33%; max-width: 58.33%;}
+.custom-col-8 {flex: 0 0 66.66%; max-width: 66.66%;}
+.custom-col-9 {flex: 0 0 75%; max-width: 75%;}
+.custom-col-10 {flex: 0 0 83.33%; max-width: 83.33%;}
+.custom-col-11 {flex: 0 0 91.66%; max-width: 91.66%;}
+.custom-col-12 {flex: 0 0 100%; max-width: 100%;}
+*/
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+/*
+  .col-4, .col-5, .col-7, .col-12 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+*/
+}
+
+
+
+
+/* Visual Containers */
+
+
+.col {                           /* Adds border box around intro image and text */
+  flex: 1 1 100%;
+  max-width: 100%;
+  border: 5px solid #7BCC00;
+  padding: 10px;
+  box-sizing: border-box;
+  /* background-color: #fff;      /* Optional: ensures background inside box is solid */
+  /* border-radius: 8px;          /* Optional: rounded corners for a smoother look */
+
+}
+
+.intro-img img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {            /* Responsive split for larger screens */
+  .intro-img {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .intro-text {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+/* Image and Hover Effects*/
+
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;                       /* You can adjust this to fit your layout */
+}
+
+.image-wrapper img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.4s ease;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(90%);                                  /* Applies grayscale filter */
+  /* filter:opacity(70%)                                      /* Other cool filter options */
+  /* filter:saturate(10%) */
+  
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.10);
+  box-shadow: 0 6px 15px  #A300CC;
+  filter: grayscale(0%);                                    /* Removes grayscale filter */
+}
+
+.button:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 15px  #A300CC;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+/* Fonts */
+
+
+.permanent-marker-regular {                   
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato        {font-family: 'Lato';}
+.poppins     { font-family: 'Poppins', sans-serif; }             /* Clean but Characterful */
+.quicksand   { font-family: 'Quicksand', sans-serif; }
+.raleway     { font-family: 'Raleway', sans-serif; }
+.nunito      { font-family: 'Nunito', sans-serif; }
+.merriweather   { font-family: 'Merriweather', serif; }          /* Artsy & Boutique Vibes */
+.alegreya-sans  { font-family: 'Alegreya Sans', sans-serif; }
+.amatic-sc      { font-family: 'Amatic SC', cursive; }
+.cabin          { font-family: 'Cabin', sans-serif; }
+.bebas-neue     { font-family: 'Bebas Neue', sans-serif; }       /* Display Fonts for Headlines */
+.playfair       { font-family: 'Playfair Display', serif; }
+.orbitron       { font-family: 'Orbitron', sans-serif; }
+
+
+
+
+/* Text Customization */
+
+
+body {
+  color: #cccccc;                          /* Text Color */
+  font-family: 'Lato';
+  background-color: #333333;
+  font-size: 15px;                           /* Default font size if not specified */
+}
+
+h1 {                                         /* h1 for title in banner */
+  font-family: 'Permanent Marker';
+  font-size: 85px;
+  color: #7BCC00;
+  text-shadow: 4px 1px #A300CC;
+}
+h2 {                                         /* h2 for footer */
+  font-family: 'Permanent Marker';
+  font-size: 15px;
+}
+h3 {                                         /* h3 for secondary headers */
+  font-family: 'Permanent Marker';
+  font-size: 30px;
+}
+p {                                          /* for paragraphs of text */
+  font-size: 20px;
+  word-spacing: 10px;
+  text-align: left
+}
+
+
+
+
+/* Link Customization */
+
+
+a:link { color: red; }
+a:visited { color: green; }
+a:hover { color: hotpink; }
+a:active { color: blue; }
+
+
+
+
+/* Button Design */
+
+
+.button {
+  background-color: #7BCC00;
+  color: #A300CC;
+  padding: 15px 50px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Permanent Marker';
+  font-size: 15px;
+}
