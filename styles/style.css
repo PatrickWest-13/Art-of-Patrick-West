@@ -69,6 +69,7 @@
     flex-direction: column;
     align-items: center;
   }
+
 /*
   .col-4, .col-5, .col-7, .col-12 {
     width: 100%;
@@ -137,6 +138,11 @@ img {
   justify-content: center;
   align-items: center;
   height: 100%;                       /* You can adjust this to fit your layout */
+
+
+  /*border: 5px solid; 
+  border-image: linear-gradient(45deg, #7BCC00, #A300CC) 1;
+  border-radius: 8px; */
 }
 
 .image-wrapper img {
@@ -163,6 +169,7 @@ img {
   box-shadow: 0 6px 15px  #A300CC;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 
 
@@ -241,9 +248,14 @@ a:active { color: blue; }
 .button {
   background-color: #7BCC00;
   color: #A300CC;
-  padding: 15px 50px;
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
   font-family: 'Permanent Marker';
   font-size: 15px;
+
+  display: inline-block;
+  width: 200px; /* Set a consistent width */
+  text-align: center;
+  margin: 5px; /* Optional: adds spacing between buttons */
 }
